@@ -15,7 +15,7 @@ export default function buildUrl<R extends ResourceName>(
   const resource: ApiResource = RESOURCES[resourceName];
   const baseUrl = 'https://arbitrum.blockscout.com';
   const basePath = resource.basePath !== undefined ? resource.basePath : config.api.basePath;
-  const path = !noProxy && isNeedProxy() ?  basePath + resource.path : basePath + resource.path;
+  const path = !noProxy && isNeedProxy() ? basePath + resource.path : basePath + resource.path;
   const url = new URL(compile(path)(pathParams), baseUrl);
 
   queryParams && Object.entries(queryParams).forEach(([ key, value ]) => {
