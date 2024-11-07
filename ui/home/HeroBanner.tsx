@@ -63,8 +63,8 @@ const HeroBanner = () => {
           >
             {
               config.meta.seo.enhancedDataEnabled ?
-                `${ config.chain.name } blockchain explorer` :
-                `${ config.chain.name } explorer`
+                ` Stellus blockchain explorer` :
+                ` Stellus blockchain explorer`
             }
           </Heading>
           { config.UI.navigation.layout === 'vertical' && (
